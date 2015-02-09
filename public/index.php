@@ -69,10 +69,15 @@
 	</div>
 </nav>
 <div class="container">
-	<img class="img-responsive" src="/img/header-large-2.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
+	<div id="main-panel-wrapper">
+		<img id="main-panel-img" class="img-responsive" src="/img/header-large-2.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
+		<div id="main-panel-text">
+			<h1>Pauline Turrel<br>Ostéopathe D.O.</h1>
+		</div>
+	</div>
 	<div class="row row-padded">
 		<div class="page-header">
-			<h1>L'ostéopathie en quelques mots</h1>
+			<h2>L'ostéopathie en quelques mots</h2>
 		</div>
 		<p class="lead">
 			L'ostéopathie est une approche thérapeutique non conventionnelle (médecine parallèle) qui repose sur l'idée

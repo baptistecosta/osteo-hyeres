@@ -40,3 +40,16 @@ body > .container {
     width: 100%;
     text-align: center;
 }
+
+#main-panel-wrapper {
+    position: relative;
+}
+
+#main-panel-text {
+    position: absolute;
+    z-index: 1; top: 10%; left: 10%;
+}
+
+#main-panel-text > h1 {
+    font-size: 56px;
+}
