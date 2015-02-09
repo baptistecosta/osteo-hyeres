@@ -44,7 +44,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Ostéopathe Hyères</a>
+			<a class="navbar-brand" href="#">Pauline Turrel - Ostéopathe D.O.</a>
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
@@ -69,14 +69,27 @@
 	</div>
 </nav>
 <div class="container">
-	<img class="img-responsive" src="/img/header-large.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
+	<img class="img-responsive" src="/img/header-large-2.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
 	<div class="row row-padded">
 		<div class="page-header">
-			<h1>Sticky footer with fixed navbar</h1>
+			<h1>L'ostéopathie en quelques mots</h1>
 		</div>
-		<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML
-			and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-		<p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+		<p class="lead">
+			L'ostéopathie est une approche thérapeutique non conventionnelle (médecine parallèle) qui repose sur l'idée
+			que des manipulations manuelles du système musculo-squelettique et myofascial permettent de soulager
+			certains troubles fonctionnels.
+		</p>
+		<p class="lead">
+			En France, le titre professionnel d'ostéopathe est reconnu, de même que celui de chiropracteur, par la loi
+			du 4 mars 20021. L'usage de ce titre n'est toutefois pas réservé aux personnes exerçant la profession
+			d'ostéopathe à titre exclusif mais est également ouvert aux personnels de santé remplissant les conditions
+			ainsi qu'il a été confirmé par le Conseil d'État. Les décrets d'application relatifs aux conditions
+			d'exercice de la profession sont toutefois distincts pour ces deux professions qui, par conséquent,
+			n'obéissent pas aux mêmes règles.
+		</p>
+		<p>
+			Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.
+		</p>
 	</div>
 	<img class="img-responsive" src="/img/baby-large.jpg" alt="Manipulation bébé"/>
 	<div class="panel-adresse-wrapper">
@@ -91,6 +104,21 @@
 		</div>
 	</div>
 	<div id="map-canvas"></div>
+	<div class="panel-adresse-wrapper">
+		<div class="panel-adresse">
+			<h2>Pôle d'activités Hyèrois</h2>
+			<p class="lead">
+				A Hyères dans le Var. Espace neuf et sécurisé de 1700 m² sur 3 niveaux avec parking privé.<br>
+				Surfaces modulables à partir de 60 m² et jusqu'à 600 m² sur un même niveau.<br>
+				Prestations modernes et à la carte.<br><br>
+				- Concept dynamique -<br>
+				- Grand parking sécurisé -<br>
+				- Accès simple et rapide en sortie d'autoroute -<br>
+				- Batiment construit selon les nouvelles normes -
+			</p>
+		</div>
+	</div>
+	<img class="img-responsive" src="/img/pole.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
 </div>
 </body>
 </html>
