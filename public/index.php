@@ -4,36 +4,14 @@
 	<title>Ostéopathe Hyères</title>
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap-glyphicons.css">
 <!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">-->
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" type="text/css">
-
-	<style type="text/css">
-		html, body, #map-canvas {
-			width: 100%;
-			height: 500px;
-			margin: 0;
-			padding: 0;
-		}
-
-		* {
-			font-family: 'Roboto', sans-serif !important;
-		}
-
-		body > .container {
-			width: 100%;
-			padding: 50px 0 0 0;
-		}
-
-		.row-padded {
-			margin: 0 0;
-			padding: 0 15px;
-		}
-
-	</style>
+	<link rel="stylesheet" href="/css/style.css">
 
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	<script type="application/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 	<script type="application/javascript">
 		function initialize() {
@@ -41,7 +19,8 @@
 
 			var map = new google.maps.Map(document.getElementById('map-canvas'), {
 				center: position,
-				zoom: 12
+				zoom: 12,
+				scrollwheel: false
 			});
 
 			var marker = new google.maps.Marker({
@@ -87,10 +66,10 @@
 				</li>
 			</ul>
 		</div>
-		<!--/.nav-collapse -->
 	</div>
 </nav>
 <div class="container">
+	<img class="img-responsive" src="/img/header-large.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
 	<div class="row row-padded">
 		<div class="page-header">
 			<h1>Sticky footer with fixed navbar</h1>
@@ -99,8 +78,19 @@
 			and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
 		<p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
 	</div>
+	<img class="img-responsive" src="/img/baby-large.jpg" alt="Manipulation bébé"/>
+	<div class="panel-adresse-wrapper">
+		<div class="panel-adresse">
+			<h2>Adresse</h2>
+			<p class="lead">
+				Pôle d'Activité Hyèrois<br>
+				1128 route de Toulon<br>
+				83400 Hyères<br>
+				01 02 03 04 05
+			</p>
+		</div>
+	</div>
 	<div id="map-canvas"></div>
 </div>
-
 </body>
 </html>
