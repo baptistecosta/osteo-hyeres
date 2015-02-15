@@ -32,13 +32,12 @@
 		google.maps.event.addDomListener(window, 'load', initialize);
 
 		$(document).ready(function() {
-			var MAX = 2;
 			var index = 0;
 			var elements = $('img[id^="img-consultation-"]');
 
 			function photoSuivanteDeConsultation() {
 				elements.each(function(i) {
-					if (i === index % MAX) {
+					if (i === index % elements.length) {
 						$(this).show();
 					} else {
 						$(this).hide();
