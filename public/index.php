@@ -19,7 +19,7 @@
 
 			var map = new google.maps.Map(document.getElementById('map-canvas'), {
 				center: position,
-				zoom: 12,
+				zoom: 13,
 				scrollwheel: false
 			});
 
@@ -30,52 +30,86 @@
 			});
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
+
+		$(document).ready(function() {
+			var MAX = 2;
+			var index = 0;
+			var elements = $('img[id^="img-consultation-"]');
+
+			function photoSuivanteDeConsultation() {
+				elements.each(function(i) {
+					if (i === index % MAX) {
+						$(this).show();
+					} else {
+						$(this).hide();
+					}
+				});
+				index++;
+
+				window.setTimeout(function() {
+					photoSuivanteDeConsultation()
+				}, 6000);
+			}
+
+			photoSuivanteDeConsultation()
+		});
+
 	</script>
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-					aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Pauline Turrel - Ostéopathe D.O.</a>
-		</div>
-		<div id="navbar" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
-						<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li class="dropdown-header">Nav header</li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
+<nav class="navbar navbar-default">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">
+			<h1>
+				PAULINE TURREL<br>
+				Ostéopathe à Hyères
+			</h1>
+		</a>
+	</div>
+	<div id="navbar" class="collapse navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li><a href="#encart-a-propos">A propos</a></li>
+			<li><a href="#encart-l-osteopathie">L'ostéopathie</a></li>
+			<li><a href="#encart-le-cabinet">Le cabinet</a></li>
+		</ul>
+		<ul class="nav navbar-nav pull-right">
+			<li>
+				<a href="#contact">
+					<span class="glyphicon glyphicon-earphone"></span>&nbsp;<span id="navbar-telephone">01 02 03 04 05</span>
+				</a>
+			</li>
+		</ul>
 	</div>
 </nav>
 <div class="container">
-	<div id="main-panel-wrapper">
-		<img id="main-panel-img" class="img-responsive" src="/img/header-large-2.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
-		<div id="main-panel-text">
-			<h1>Pauline Turrel<br>Ostéopathe D.O.</h1>
-		</div>
+	<div class="image">
+		<img id="img-consultation-0" src="/img/consultation-0.jpg" class="ri">
+		<img id="img-consultation-1" src="/img/consultation-1.jpg" class="ri">
+		<img id="img-consultation-2" src="/img/consultation-2.jpg" class="ri">
 	</div>
-	<div class="row row-padded">
+
+	<div id="encart-a-propos" class="row row-padded">
+		<div class="page-header">
+			<h2>A propos</h2>
+		</div>
+		<p class="lead">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+			dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+			ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+			fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+			deserunt mollit anim id est laborum.
+		</p>
+	</div>
+
+
+	<div id="encart-l-osteopathie" class="row row-padded">
 		<div class="page-header">
 			<h2>L'ostéopathie en quelques mots</h2>
 		</div>
@@ -96,33 +130,50 @@
 			Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.
 		</p>
 	</div>
-	<img class="img-responsive" src="/img/baby-large.jpg" alt="Manipulation bébé"/>
-	<div class="panel-adresse-wrapper">
-		<div class="panel-adresse">
-			<h2>Adresse</h2>
-			<p class="lead">
-				Pôle d'Activité Hyèrois<br>
-				1128 route de Toulon<br>
-				83400 Hyères<br>
-				01 02 03 04 05
-			</p>
+
+	<div id="encart-l-osteopathie-en-images" class="row row-padded">
+		<div class="col-lg-4 text-center">
+			<img class="img-circle" src="/img/l-osteopathie-1.jpg" alt=""/>
+			<p class="lead">Lorem Ipsum, Lorem Ipsum</p>
+		</div>
+		<div class="col-lg-4 text-center">
+			<img class="img-circle" src="/img/l-osteopathie-1.jpg" alt=""/>
+			<p class="lead">Lorem Ipsum, Lorem Ipsum</p>
+		</div>
+		<div class="col-lg-4 text-center">
+			<img class="img-circle" src="/img/l-osteopathie-1.jpg" alt=""/>
+			<p class="lead">Lorem Ipsum, Lorem Ipsum</p>
 		</div>
 	</div>
+
+	<img class="img-responsive" src="/img/consultation-2.jpg" alt="Manipulation bébé"/>
+
+	<div id="encart-le-cabinet">
+		<div class="page-header">
+			<h2>Le cabinet</h2>
+		</div>
+		<h3>Adresse</h3>
+		<p class="lead">
+			Pôle d'Activité Hyèrois<br>
+			1128 route de Toulon<br>
+			83400 Hyères<br>
+		</p>
+		<h3>
+			Contact
+		</h3>
+		<p class="lead">
+			<span class="glyphicon glyphicon-earphone"></span> 01 02 03 04 05<br>
+			<span class="glyphicon glyphicon-envelope"></span> osteo-hyeres@gmail.com
+		</p>
+		<p class="lead">
+			- Grand parking sécurisé -<br>
+			- Accès simple et rapide en sortie d'autoroute -<br>
+			- Batiment construit selon les nouvelles normes -
+		</p>
+	</div>
+
 	<div id="map-canvas"></div>
-	<div class="panel-adresse-wrapper">
-		<div class="panel-adresse">
-			<h2>Pôle d'activités Hyèrois</h2>
-			<p class="lead">
-				A Hyères dans le Var. Espace neuf et sécurisé de 1700 m² sur 3 niveaux avec parking privé.<br>
-				Surfaces modulables à partir de 60 m² et jusqu'à 600 m² sur un même niveau.<br>
-				Prestations modernes et à la carte.<br><br>
-				- Concept dynamique -<br>
-				- Grand parking sécurisé -<br>
-				- Accès simple et rapide en sortie d'autoroute -<br>
-				- Batiment construit selon les nouvelles normes -
-			</p>
-		</div>
-	</div>
+
 	<img class="img-responsive" src="/img/pole.jpg" alt="Ostéopathe Hyères - Manipulation dorsale"/>
 </div>
 </body>

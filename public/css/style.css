@@ -11,7 +11,7 @@ html, body, #map-canvas {
 
 body > .container {
     width: 100%;
-    padding: 50px 0 0 0;
+    padding: 0;
 }
 
 .img-responsive {
@@ -32,7 +32,6 @@ body > .container {
 .panel-adresse-wrapper {
     display: flex;
     align-items: center;
-
     height: 350px;
 }
 
@@ -41,15 +40,149 @@ body > .container {
     text-align: center;
 }
 
+.panel-centered-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.panel-centered {
+	width: 100%;
+	text-align: center;
+}
+
 #main-panel-wrapper {
-    position: relative;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 
 #main-panel-text {
     position: absolute;
-    z-index: 1; top: 10%; left: 10%;
+    z-index: 1;
+	top: 10%;
+	left: 10%;
 }
 
 #main-panel-text > h1 {
     font-size: 56px;
+}
+
+
+.image {
+	display: inline-block;
+}
+
+img.ri {
+	position: relative;
+	max-width: 100%;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navbar {
+	position: relative;
+	min-height: 80px;
+	margin-bottom: 0;
+	border: 1px solid transparent;
+}
+
+.navbar-header {
+	min-height: 80px;
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		 border-radius: 0;
+	}
+}
+
+.navbar-default {
+	background-color: #DB0073;
+	border-width: 0 0 1px;
+	border-color: #d2006b;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #ddd;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: #d2006b;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #ddd;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #fff;
+	background-color: #d2006b;
+}
+
+.navbar-default .navbar-toggle {
+	background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: #eee;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #eee;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #DB0073;
+}
+
+#encart-a-propos {
+	text-align: center;
+}
+
+#encart-l-osteopathie {
+	text-align: center;
+}
+
+#encart-l-osteopathie-en-images {
+	color: white;
+	font-size: 21px;
+	background-color: #DB0073;
+	padding: 80px 0;
+}
+
+#encart-le-cabinet {
+	text-align: center;
+}
+
+.background-fushia {
+	background-color: #DB0073;
+}
+
+.c-white {
+	color: white;
+}
+
+h2 {
+	color: #DB0073;
+}
+
+.navbar h1 {
+	display: inline;
+	font-size: 24px;
+}
+
+#navbar-telephone {
+	font-size: 18px;
 }
