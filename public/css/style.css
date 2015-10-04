@@ -98,6 +98,10 @@ img.ri {
 	}
 }
 
+.navbar-nav {
+	font-size: 20px;
+}
+
 .navbar-default {
 	background-color: #DB0073;
 	border-width: 0 0 1px;
@@ -185,4 +189,12 @@ h2 {
 
 #navbar-telephone {
 	font-size: 18px;
+}
+
+@media (min-width: 768px) {
+	.lead {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
