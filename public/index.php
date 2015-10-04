@@ -40,16 +40,6 @@
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
 
-		$(document).ready(function() {
-			$('#slick').slick({
-				dots: true,
-				fade: true,
-				speed: 1000,
-				autoplay: true,
-				autoplaySpeed: 4000
-			});
-		});
-
 	</script>
 
 </head>
@@ -71,6 +61,9 @@
 	</div>
 	<div id="navbar" class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">
+			<li><a href="#encart-a-propos" class="lead">A propos</a></li>
+			<li><a href="#encart-l-osteopathie" class="lead">L'ostéopathie</a></li>
+			<li><a href="#encart-le-cabinet" class="lead">Le cabinet</a></li>
 			<li><a href="#encart-a-propos">A propos</a></li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">L'ostéopathie <span class="caret"></span></a>
@@ -100,15 +93,49 @@
 		</ul>
 	</div>
 </nav>
-
-<div id="slick">
-	<div><img id="img-consultation-0" src="/img/consultation-0.jpg" class="ri"></div>
-	<div><img id="img-consultation-1" src="/img/consultation-1.jpg" class="ri"></div>
-	<div><img id="img-consultation-2" src="/img/consultation-2.jpg" class="ri"></div>
-</div>
-
-
 <div class="container">
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="/img/consultation-0.jpg">
+				<div class="carousel-caption">
+					Caption
+				</div>
+			</div>
+			<div class="item">
+				<img src="/img/consultation-1.jpg">
+				<div class="carousel-caption">
+					Caption
+				</div>
+			</div>
+			<div class="item">
+				<img src="/img/consultation-2.jpg">
+				<div class="carousel-caption">
+					Caption
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Précédent</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Suivant</span>
+		</a>
+	</div>
+	
+	
 	<div id="encart-a-propos" class="row row-padded">
 		<div class="page-header">
 			<h2>A propos</h2>
